@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Job Listings Platform</h1>
+        {% if user %}
+        <p>Welcome, {{ user }}! <a href="/logout">Logout</a></p>
+        {% else %}
+        <a href="/login">Login</a> | <a href="/register">Register</a>
+        {% endif %}
+    </header>
+    
+    <main>
+        {% if user %}
+        <form method="get" action="/home" class="search-form">
+            <input type="text" name="query" placeholder="Search Job Title">
+            <input type="text" name="location" placeholder="Search Location">
+            <button type="submit">Search</button>
+        </form>
+        
+        <ul>
+            {% for job in jobs %}
+            <li>
+                <strong>{{ job.title }}</strong><br>
+                {{ job.company }} - {{ job.location }}<br>
+                <a href="mailto:{{ job.email }}">{{ job.email }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/post_job" class="post-job-link">Post a Job</a>
+        {% else %}
+        <p>You must <a href="/login">log in</a> to view job listings and post jobs.</p>
+        {% endif %}
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Job Listings Platform. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
