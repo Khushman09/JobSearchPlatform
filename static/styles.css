@@ -1,0 +1,288 @@
+/* General Body Styles */
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #0d4276;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 5px 0;
+}
+
+header a {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+header a:hover {
+    text-decoration: none;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #0d4276;
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Form Styles */
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #0d4276;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #073864;
+}
+
+/* Main Section Styling */
+main {
+    margin: 20px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Job Listings */
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+li {
+    background: white;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li strong {
+    color: #0d4276;
+}
+
+/* Search Form */
+form.search-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form.search-form input {
+    width: 374px;
+    margin-right: 10px;
+}
+
+form.search-form button {
+    padding: 10px 15px;
+}
+
+/* Links */
+a {
+    color: #0d4276;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Post a Job Link Styling */
+a.post-job-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #0d4276;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.post-job-link:hover {
+    text-decoration: underline;
+}
+
+/* Flash Messages */
+.flash {
+    max-width: 400px;
+    margin: 10px auto;
+    color: #f44336;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    form {
+        width: 90%;
+    }
+
+    ul {
+        width: 90%;
+    }
+
+    form.search-form input {
+        width: 150px;
+    }
+}
+
+/* Styles for Login and Register pages */
+.login-register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 80vh; 
+}
+
+.login-register-container h1 {
+    color: #073864;
+    margin-top: 150px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.login-register-container form {
+    max-width: 400px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login-register-container a {
+    text-align: center;
+    color: #0d4276;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.login-register-container a:hover {
+    text-decoration: underline;
+}
+/* Landing Page Styles */
+.landing-header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #0d4276;
+    color: white;
+}
+
+.landing-header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.landing-header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.landing-main {
+    text-align: center;
+    padding: 20px;
+    
+}
+
+.landing-main p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.landing-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.landing-buttons .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #0d4276;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+
+}
+
+.landing-buttons .button:hover {
+    background-color: #073864;
+}
